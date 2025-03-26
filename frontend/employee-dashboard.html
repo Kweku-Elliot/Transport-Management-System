@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Booking</title>
+    <link rel="stylesheet" href="/assets/bootstrap.css">
+    <link rel="stylesheet" href="/assets/employee.css">
+    <script src="/assets/bootstrap.js"></script>
+    <script src="js/employee.js" defer></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </label>
+        <div class="logo">
+          <h2>Employee Dashboard</h2>
+        </div>
+        <div class="nav-items">
+          <ul class="overview">
+            <h3>Overview</h3>
+            <li>
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg> Home</a>
+            </li>
+            <li>
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+                <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707z"/>
+                <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78z"/>
+              </svg>About</a>
+            </li>
+          </ul>
+          <ul class="account">
+            <h3>Account</h3>
+            <li>
+                <a href="https://wa.me/+233531835999?text=I%20have%20problems%20booking%20on%20the%20website" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                  </svg>
+                  Contact via WhatsApp
+                </a>
+              </li>
+              
+            <li>
+                <a href="#" onclick="logoutUser()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.79 0l-.342 1.15a8.07 8.07 0 0 0-1.847.986L3.054 2.72a1.2 1.2 0 0 0-1.707 0l-1.2 1.2a1.2 1.2 0 0 0 0 1.707l.664.664A8.07 8.07 0 0 0 1 8c0 .304.016.605.048.902l-.664.664a1.2 1.2 0 0 0 0 1.707l1.2 1.2a1.2 1.2 0 0 0 1.707 0l.664-.664c.49.427 1.047.78 1.647 1.057l.342 1.15c.393 1.4 2.377 1.4 2.79 0l.342-1.15a8.07 8.07 0 0 0 1.847-.986l.664.664a1.2 1.2 0 0 0 1.707 0l1.2-1.2a1.2 1.2 0 0 0 0-1.707l-.664-.664c.032-.297.048-.598.048-.902s-.016-.605-.048-.902l.664-.664a1.2 1.2 0 0 0 0-1.707l-1.2-1.2a1.2 1.2 0 0 0-1.707 0l-.664.664a8.07 8.07 0 0 0-1.847-.986l-.342-1.15z"/>
+                  </svg> Log out
+                </a>
+              </li>
+              
+          </ul>
+        </div>
+    </nav>
+<main>
+
+    <h1>Book Your Transport</h1>
+    
+   
+    <form onsubmit="bookTransport(event)">
+      <div>
+          <label for="pickup">Pickup Location:</label>
+          <input type="text" id="pickup" required>
+      </div>
+      <div>
+          <label for="dropoff">Drop-off Location:</label>
+          <input type="text" id="dropoff" required>
+      </div>
+      <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" required>
+      </div>
+      <div>
+          <label for="time_slot">Time Slot:</label>
+          <select id="time_slot">
+            <option value="">Select a Time Slot</option>
+          </select>
+          
+      </div>
+      <div>
+          <label for="vehicleSelect">Vehicle Assigned:</label>
+          <select id="vehicleSelect"></select>
+      </div>
+      
+
+      <button type="submit" class="btn btn-dark" data-mdb-ripple-init>Book Now</button>
+  </form>
+  
+  <section class="bookings-section">
+      <div>
+          <h3>Your Bookings</h3>
+          <ul id="bookingList"></ul>
+      </div>
+  </section>
+  
+</main>
+</body>
+</html>

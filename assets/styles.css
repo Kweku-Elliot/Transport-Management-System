@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #b9eded;
+}
+
+/* Headings */
+h2, h3 {
+    color: #333;
+}
+
+/* Forms */
+form {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input, select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Lists */
+
+/* Style the main section */
+main {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background */
+}
+
+main ul {
+    padding: 0;
+}
+
+main ul li {
+    list-style: none;
+    background: #ffffff; /* White background for list items */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333; /* Dark text */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+   
+
+    form {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+/* Headings */
+h2, h3 {
+    color: #333;
+}
+

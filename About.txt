@@ -1,0 +1,8 @@
+This project was  created with 
+Html
+Css
+Javascript
+Bootstrap
+Node.Js
+Mysql2
+Xamp for the database

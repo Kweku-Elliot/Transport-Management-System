@@ -1,0 +1,71 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b9eded;
+}
+
+/* Headings */
+h2, h3 {
+    color: #333;
+}
+
+h1{
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+select, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+/* Booking List */
+main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main ul li {
+    background: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bookings-section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+div {
+    display: block;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    
+    form {
+        padding: 10px;
+    }
+}
